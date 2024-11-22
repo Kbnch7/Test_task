@@ -108,6 +108,7 @@ def validate_save(msg):
     if len(msg) != 1:
         raise ValueError(TOO_MANY_ARGUMENTS_ERROR)
 
+
 # Основной цикл программы.
 if __name__ == '__main__':
     json_name = input(HELLO_MESSAGE)

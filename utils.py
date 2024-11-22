@@ -83,7 +83,7 @@ def decode_json(json_name: str = None):
     except FileNotFoundError:
         print(FILE_NOT_FOUND_ERROR)
         open(json_name, 'w', encoding='utf-8').close()
-        return 0, {}
+        return 0, []
 
 
 # Класс библиотеки
@@ -144,7 +144,6 @@ class Library:
 
     # Функция сохранения изменений.
     def save(self):
-        print(1)
         with open(self.__source, 'w', encoding='utf-8') as f:
             books = {str(book.id): {
                 'id': book.id,
